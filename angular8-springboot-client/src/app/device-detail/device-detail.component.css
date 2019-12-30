@@ -1,0 +1,91 @@
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr { border: 1px solid #ccc; }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+  Label the data
+  */
+  td:nth-of-type(1):before { content: "ID_DEVICE"; }
+  td:nth-of-type(2):before { content: "DEVICE_NAME"; }
+  td:nth-of-type(3):before { content: "STATUS"; }
+  td:nth-of-type(4):before { content: "COMMAND"; }
+
+}
+
+.table-customize > thead > tr {
+  background-color: #535353;
+  border-radius: 3px 3px 0 0;
+}
+.table-customize > thead > tr > th {
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.table{
+  position: absolute;
+}
+@-webkit-keyframes my {
+  0% { color: red; }
+  50% { color: #fff;  }
+  100% { color: red;  }
+}
+@-moz-keyframes my {
+  0% { color: red;  }
+  50% { color: #fff;  }
+  100% { color: red;  }
+}
+@-o-keyframes my {
+  0% { color: red; }
+  50% { color: #fff; }
+  100% { color: red;  }
+}
+@keyframes my {
+  0% { color: red;  }
+  50% { color: #fff;  }
+  100% { color: red;  }
+}
+.test {
+ left: 24px;
+  font-size:24px;
+  font-weight:bold;
+  -webkit-animation: my 700ms infinite;
+  -moz-animation: my 700ms infinite;
+  -o-animation: my 700ms infinite;
+  animation: my 700ms infinite;
+}
+

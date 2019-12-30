@@ -1,0 +1,44 @@
+<div class="col-md-6">
+  <table class="table table-customize">
+    <thead>
+    <tr>
+      <th>ID DEVICE</th>
+      <th>DEVICE NAME</th>
+      <th>STATUS</th>
+      <th>COMMAND</th>
+      <th>OPERATING STATUS</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let device of Device">
+      <td>{{device.id_device}}</td>
+      <td>{{device.device_name}}</td>
+<!--      <td>{{device.status}}</td>-->
+      <td >
+        <div *ngIf="device.status === -4">rest</div>
+        <div *ngIf="device.status === -3">begin start</div>
+        <div *ngIf="device.status === -2">reset hard</div>
+        <div *ngIf="device.status === -1">control by web</div>
+        <div *ngIf="device.status === 0">return normal schedal</div>
+        <div *ngIf="device.status === 1">face rec</div>
+        <div *ngIf="device.status === 2">face get data</div>
+        <div *ngIf="device.status === 3">face update data</div>
+        <div *ngIf="device.status === 4">return normal schedal w/o internet</div>
+        <div *ngIf="device.status == 5">face_rec w/o internet</div>
+        <div *ngIf="device.status == 6">face_store w/o internet</div>
+      </td>
+      <td>
+        <div *ngIf="device.command == 0">wait command</div>
+        <div *ngIf="device.command == 1">ask hard reset</div>
+        <div *ngIf="device.command == 2">ask face_data</div>
+      </td>
+      <td >
+        <div class = "test" *ngIf="device.check_alive == 1" style="margin-left: 60px">O</div>
+        <div *ngIf="device.check_alive == 0" style="font-size:24px;font-weight:bold;margin-left: 60px;">O</div>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

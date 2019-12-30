@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "assets/scss/_cards.scss";
+@import "assets/scss/_footer.scss";
+@import "assets/scss/_global.scss";
+@import "assets/scss/_login.scss";
+@import "assets/scss/_navbar.scss";
+@import "assets/scss/_mixins.scss";
+@import "assets/scss/_utilities.scss";
+@import "assets/scss/_variables.scss";
+@import "assets/css/sb-admin.css";
+@import "assets/css/sb-admin.min.css";
